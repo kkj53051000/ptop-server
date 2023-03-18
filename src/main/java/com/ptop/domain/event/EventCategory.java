@@ -18,5 +18,4 @@ public class EventCategory {
 
     @Embedded
     private Audit audit;
-
 }
