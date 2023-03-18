@@ -17,7 +17,7 @@ public class PointHistory {
     private Point point;
 
     @Column(nullable = false)
-    private String pointType; // 적립, 사용 등
+    private String pointType;
 
     @Embedded
     private Audit audit;

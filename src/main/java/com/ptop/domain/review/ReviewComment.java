@@ -1,24 +1,28 @@
-package com.ptop.domain.point;
+package com.ptop.domain.review;
 
 import com.ptop.domain.common.Audit;
 import com.ptop.domain.user.User;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "points")
-public class Point {
+public class ReviewComment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "point_id")
+    @Column(name = "review_comment_id")
     private Long id;
+
+    private String content;
+
+    @Column(name = "parent_comment_id")
+    private Long parentCommentId;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(name = "point_amount")
-    private Integer pointAmount;
+    @ManyToOne
+    @JoinColumn(name = "review_id", nullable = false)
+    private Review review;
 
     @Embedded
     private Audit audit;

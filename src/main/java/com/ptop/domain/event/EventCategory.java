@@ -16,6 +16,8 @@ public class EventCategory {
 
     private String description;
 
+    private String img;
+
     @Embedded
     private Audit audit;
 }

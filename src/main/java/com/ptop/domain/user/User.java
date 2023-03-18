@@ -2,6 +2,7 @@ package com.ptop.domain.user;
 
 import com.ptop.domain.common.Address;
 import com.ptop.domain.common.Audit;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @Table(name = "users")
+@Getter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

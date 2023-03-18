@@ -6,10 +6,10 @@ import com.ptop.domain.user.User;
 import javax.persistence.*;
 
 @Entity
-public class Comment {
+public class CommunityComment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "comment_id")
+    @Column(name = "community_comment_id")
     private Long id;
 
     private String content;

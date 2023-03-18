@@ -13,23 +13,20 @@ public class CommunityPost {
     @Column(name = "post_id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
     private String title;
 
     private String content;
 
+    @Column(name = "image_url")
     private String imageUrl;
 
     private Long views;
 
-    private Long likes;
-
-    private Long dislikes;
-
     private boolean isPublic;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
